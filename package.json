@@ -1,0 +1,9 @@
+{
+  "name": "eduguide-ai-chatbot",
+  "version": "1.0.0",
+  "description": "EduGuide AI — Coaching Institute Assistant Chatbot",
+  "scripts": {
+    "dev": "npx -y http-server ./ -p 3000 -o -c-1",
+    "start": "npx -y http-server ./ -p 3000 -c-1"
+  }
+}

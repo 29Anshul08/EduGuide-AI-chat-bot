@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGuide AI — Coaching Institute Assistant</title>
+    <meta name="description" content="AI-powered assistant for competitive exam coaching. Get guidance on JEE, NEET, CUET courses, admissions, fees, and schedules.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Landing Hero -->
+    <div id="landing-section" class="landing-section">
+        <div class="hero-bg-effects">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-logo">
+                <div class="logo-icon">E</div>
+                <span class="logo-text">Edu<span class="logo-accent">Guide</span> AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="nav-chat-btn" class="nav-cta" onclick="openChat()">💬 Chat Now</button>
+        </nav>
+        <div class="hero-content">
+            <div class="hero-badge"><span class="badge-dot"></span> AI-Powered • Available 24/7</div>
+            <h1 class="hero-title">Your Path to <span class="gradient-text">JEE & NEET</span> Success</h1>
+            <p class="hero-subtitle">Get instant, personalized guidance for competitive exam preparation. From course selection to admission — our AI assistant is here to help.</p>
+            <div class="hero-actions">
+                <button id="hero-start-chat" class="btn-primary" onclick="openChat()">🚀 Start Chatting</button>
+                <button id="hero-explore" class="btn-secondary" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Explore Courses ↗</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item"><span class="stat-number">15,000+</span><span class="stat-label">Students Coached</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number">92%</span><span class="stat-label">Selection Rate</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number">50+</span><span class="stat-label">Expert Faculty</span></div>
+            </div>
+        </div>
+        <!-- Course Cards -->
+        <div class="quick-actions" id="courses">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Programs</span></h2>
+                <p class="section-subtitle">Comprehensive coaching for every competitive exam</p>
+            </div>
+            <div class="action-cards">
+                <div class="action-card" onclick="openChatWith('I want to know about JEE coaching')">
+                    <div class="card-icon jee">🎯</div>
+                    <h3>JEE Main & Advanced</h3>
+                    <p>Comprehensive coaching for engineering aspirants with expert faculty.</p>
+                    <span class="card-tag">Class 11-12 & Droppers</span>
+                </div>
+                <div class="action-card" onclick="openChatWith('I want to know about NEET coaching')">
+                    <div class="card-icon neet">🩺</div>
+                    <h3>NEET (UG)</h3>
+                    <p>Expert-led preparation for medical entrance with focus on PCB.</p>
+                    <span class="card-tag">Class 11-12 & Droppers</span>
+                </div>
+                <div class="action-card" onclick="openChatWith('Tell me about Foundation courses')">
+                    <div class="card-icon foundation">📖</div>
+                    <h3>Foundation (8-10)</h3>
+                    <p>Build strong fundamentals for Olympiads & competitive exams.</p>
+                    <span class="card-tag">Class 8, 9 & 10</span>
+                </div>
+                <div class="action-card" onclick="openChatWith('Tell me about Board exam and CUET coaching')">
+                    <div class="card-icon boards">📚</div>
+                    <h3>Boards & CUET</h3>
+                    <p>Score 95%+ in board exams alongside CUET coaching.</p>
+                    <span class="card-tag">Class 11-12</span>
+                </div>
+            </div>
+        </div>
+        <!-- Results -->
+        <div class="results-section" id="results">
+            <div class="section-header">
+                <h2 class="section-title">Proven <span class="gradient-text">Results</span></h2>
+                <p class="section-subtitle">Our students consistently achieve top ranks</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card"><div class="result-rank">AIR 45</div><div class="result-name">Priya Sharma</div><div class="result-exam">JEE Advanced 2025</div></div>
+                <div class="result-card"><div class="result-rank">AIR 112</div><div class="result-name">Rahul Verma</div><div class="result-exam">NEET UG 2025</div></div>
+                <div class="result-card"><div class="result-rank">AIR 78</div><div class="result-name">Ananya Gupta</div><div class="result-exam">JEE Advanced 2025</div></div>
+                <div class="result-card"><div class="result-rank">99.8%ile</div><div class="result-name">Vikash Kumar</div><div class="result-exam">JEE Main 2025</div></div>
+                <div class="result-card"><div class="result-rank">AIR 203</div><div class="result-name">Sneha Patel</div><div class="result-exam">NEET UG 2025</div></div>
+                <div class="result-card"><div class="result-rank">698/720</div><div class="result-name">Arjun Singh</div><div class="result-exam">NEET UG 2025</div></div>
+            </div>
+        </div>
+        <!-- CTA -->
+        <div class="cta-section" id="contact">
+            <div class="cta-card">
+                <h2>Ready to Begin Your Journey?</h2>
+                <p>Chat with our AI assistant or talk to an expert counselor today.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="openChat()">💬 Chat with AI</button>
+                    <a href="tel:+919876543210" class="btn-secondary">📞 Call: +91 98765 43210</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer"><p>© 2026 EduGuide AI — Empowering Students for a Brighter Future</p></footer>
+    </div>
+
+    <!-- Chat Overlay -->
+    <div id="chat-overlay" class="chat-overlay">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <div class="chat-avatar">E</div>
+                    <div class="chat-header-info"><h2>EduGuide AI</h2><div class="chat-status"><span class="status-dot"></span> Online</div></div>
+                </div>
+                <div class="chat-header-actions">
+                    <button id="lead-form-toggle" class="header-action-btn" onclick="toggleLeadForm()" title="Contact Form">👤+</button>
+                    <button id="chat-close-btn" class="header-action-btn close-btn" onclick="closeChat()" title="Close">✕</button>
+                </div>
+            </div>
+            <!-- Lead Form -->
+            <div id="lead-form" class="lead-form hidden">
+                <div class="lead-form-header"><h3>📋 Get Personalized Guidance</h3><p>Our counselor will call you back</p></div>
+                <form id="lead-collection-form" onsubmit="submitLeadForm(event)">
+                    <div class="form-group"><label for="lead-name">Student Name *</label><input type="text" id="lead-name" placeholder="Full name" required></div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="lead-class">Class *</label><select id="lead-class" required><option value="">Select</option><option value="8">Class 8</option><option value="9">Class 9</option><option value="10">Class 10</option><option value="11">Class 11</option><option value="12">Class 12</option><option value="dropper">Dropper</option></select></div>
+                        <div class="form-group"><label for="lead-exam">Target Exam *</label><select id="lead-exam" required><option value="">Select</option><option value="JEE">JEE</option><option value="NEET">NEET</option><option value="Boards">Boards</option><option value="CUET">CUET</option><option value="Foundation">Foundation</option><option value="Other">Other</option></select></div>
+                    </div>
+                    <div class="form-group"><label for="lead-phone">Phone Number *</label><input type="tel" id="lead-phone" placeholder="+91 XXXXX XXXXX" required></div>
+                    <button type="submit" class="form-submit-btn" id="lead-submit-btn">Submit & Get Callback ✉️</button>
+                </form>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <!-- Quick Replies -->
+            <div id="quick-replies" class="quick-replies">
+                <button class="quick-reply-btn" onclick="sendQuickReply('What courses do you offer?')">📚 Courses</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('What are the fees?')">💰 Fees</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('Tell me about batch timings')">🕐 Timings</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('Share your results')">🏆 Results</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('How to take admission?')">📝 Admission</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('Talk to counselor')">📞 Counselor</button>
+            </div>
+            <div class="chat-input-area">
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Type your question..." autocomplete="off" onkeypress="handleKeyPress(event)">
+                    <button id="chat-send-btn" class="send-btn" onclick="sendMessage()">➤</button>
+                </div>
+                <div class="chat-input-footer"><span>Powered by <strong>EduGuide AI</strong></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- FAB -->
+    <button id="chat-fab" class="chat-fab" onclick="openChat()">💬<span class="fab-badge">1</span></button>
+
+    <script src="chatbot.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
